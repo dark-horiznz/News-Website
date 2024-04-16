@@ -1,0 +1,75 @@
+body {
+    background-color: #f0f0f0;
+    background-image: url('depositphotos_5579067-stock-photo-ancient-newspapers.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 420px;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10%;
+
+}
+
+.login-box h2 {
+    margin: 0;
+    padding: 0 0 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    border-radius: 10%;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s ease all;
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+.login-box button[type="submit"] {
+    border-radius: 10%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #03e9f4;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}

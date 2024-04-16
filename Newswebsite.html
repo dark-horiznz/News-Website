@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="icon" type="image/x-icon" href="images.png">
+    <link rel="stylesheet" href="Newswebsite.css">
+</head>
+
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" class="Company-logo">
+                <img src="images.png" alt="company logo">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link" id="Movies" onclick="onNavItemClick('Movies')">Movies</li>
+                    <li class="hover-link" id="Cricket" onclick="onNavItemClick('Cricket')">Cricket</li>
+                    <li class="hover-link" id="Politics" onclick="onNavItemClick('Politics')">Politics</li>
+                    <li class="hover-link" id="Finance" onclick="onNavItemClick('Finance')">Finance</li>
+                    <li class="hover-link" id="Global" onclick="onNavItemClick('Global')">Global</li>
+                    <li class="hover-link" id="Bollywood" onclick="onNavItemClick('Bollywood')">Bollywood</li>
+                    <li class="hover-link" id="Business" onclick="onNavItemClick('Business')">Business</li>
+                    <li class="hover-link" id="Community" onclick="onNavItemClick('Community')">Community</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input type="text" class="news-input" placeholder="E.g:IPL" id="search-text">
+                <button class="search-button" id="search-button" onclick="onSearchButtonClick()">Search</button>
+                <button class="search-button"><a href="login.html">Login</button></a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="mar">
+            <div class="exclusive">BREAKING NEWS</div>
+            <marquee behavior="scroll" direction="left">
+              <div class="headlines">
+              </div>
+            </marquee>
+          </div>
+        <div class="aqi">
+            <div class="air"><a href="https://www.news18.com/aqi-india/" class="air">AIR QUALITY INDEX</a>
+            </div>
+            <ul class="widget ">
+                <li class="aqistatus">
+                    <a href="https://www.news18.com/aqi-india/new-delhi/">
+                        <span class="location">
+                            <span class="icon">
+                                <img src="https://cdn-icons-png.freepik.com/256/684/684809.png" alt="" height="20px">
+                            </span>
+                            <span>New Delhi</span>
+                        </span>
+                        <div class="poor">
+                            <div class="aqic">
+                                <div class="aqicount">126</div>
+                                <div class="aqitext">AQI-IN</div>
+                                <div class="aqicounttext">Poor</div>
+                            </div>
+                            <div class="image">
+                                <img src="Screenshot 2024-04-06 161131.png" alt=""
+                                    height="60px" width="60px">
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="aqistatus">
+                    <a href="https://www.news18.com/aqi-india/mumbai/">
+                        <span class="location">
+                            <span class="icon">
+                                <img src="https://cdn-icons-png.freepik.com/256/684/684809.png" alt="" height="20px">
+                            </span>
+                            <span>Mumbai</span>
+                        </span>
+                        <div class="poor">
+                            <div class="aqic">
+                                <div class="aqicount">176</div>
+                                <div class="aqitext">AQI-IN</div>
+                                <div class="aqicounttext">Poor</div>
+                            </div>
+                            <div class="image">
+                                <img src="Screenshot 2024-04-06 161131.png" alt=""
+                                    height="60px" width="60px">
+                            </div>
+                        </div>
+                        </a>
+                </li>
+                <li class="aqistatus2">
+                    <a href="https://www.news18.com/aqi-india/Ahmedabad/">
+                        <span class="location">
+                            <span class="icon">
+                                <img src="https://cdn-icons-png.freepik.com/256/684/684809.png" alt="" height="20px">
+                            </span>
+                            <span>Ahmedabad</span>
+                        </span>
+                        <div class="poor">
+                            <div class="aqic">
+                                <div class="aqicount2">86</div>
+                                <div class="aqitext">AQI-IN</div>
+                                <div class="aqicounttext">MODERATE</div>
+                            </div>
+                            <div class="image">
+                                <img src="Screenshot 2024-04-06 193226.png" alt=""
+                                    height="60px" width="60px">
+                            </div>
+                        </div>
+                        </a>
+                    </li>
+                    <li class="aqistatus2">
+                        <a href="https://www.news18.com/aqi-india/bangalore/">
+                            <span class="location">
+                                <span class="icon">
+                                    <img src="https://cdn-icons-png.freepik.com/256/684/684809.png" alt="" height="20px">
+                                </span>
+                                <span>Bangalore</span>
+                            </span>
+                            <div class="poor">
+                                <div class="aqic">
+                                    <div class="aqicount2">96</div>
+                                    <div class="aqitext">AQI-IN</div>
+                                    <div class="aqicounttext">MODERATE</div>
+                                </div>
+                                <div class="image">
+                                    <img src="Screenshot 2024-04-06 193226.png" alt=""
+                                        height="60px" width="60px">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+            </ul>
+        <div class="f"></div>
+            <div class="we">Today's Weather</div>
+            <div class="row" style="text-align: center;">
+                <form action="">
+                    <input type="search" id="search" class="search-box" placeholder="Search by city name">
+                </form>
+            </div>
+            <div class="row" id="weather" >
+            </div>
+        </div>
+        <div class="cards-conatiner container flex" id="cards-container"></div>
+        
+    </main>
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title"></h3>
+                <h6 id="news-source"></h6>
+                <p class="news-description" id="news-desc"></p>
+            </div>
+        </div>
+    </template>
+    
+    <script src="Newswebsite.js"></script>
+</body>
+
+</html>
